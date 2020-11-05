@@ -5,7 +5,14 @@
 
 module.exports = {
   Query: {
-    
+    pets() {
+      return {
+        id: '3d9o0W2b7t8Cw1',
+        createdAt: 9,
+        name: 'Floppsy',
+        type: 'Rabbit'
+      }
+    }
   },
   Mutation: {
     
