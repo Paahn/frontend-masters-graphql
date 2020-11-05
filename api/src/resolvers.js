@@ -5,26 +5,21 @@
 
 module.exports = {
   Query: {
-    pets() {
-      return {
-        id: '3d9o0W2b7t8Cw1',
-        createdAt: 9,
-        name: 'Floppsy',
-        type: 'Rabbit'
-      }
+    pets(_, __, {models}) {
+      return models.Pet.findMany()
     }
   },
-  Mutation: {
+  // Mutation: {
     
-  },
-  Pet: {
-    img(pet) {
-      return pet.type === 'DOG'
-        ? 'https://placedog.net/300/300'
-        : 'http://placekitten.com/300/300'
-    }
-  },
-  User: {
+  // },
+  // Pet: {
+  //   img(pet) {
+  //     return pet.type === 'DOG'
+  //       ? 'https://placedog.net/300/300'
+  //       : 'http://placekitten.com/300/300'
+  //   }
+  // },
+  // User: {
     
-  }
+  // }
 }
