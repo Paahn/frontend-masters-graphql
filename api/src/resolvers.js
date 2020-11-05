@@ -5,8 +5,8 @@
 
 module.exports = {
   Query: {
-    pets(_, __, {models}) {
-      return models.Pet.findMany()
+    pets(_, __, context) {
+      return context.models.Pet.findMany()
     }
   },
   // Mutation: {
