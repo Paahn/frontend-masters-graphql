@@ -4,9 +4,13 @@ const resolvers = require('./resolvers')
 const {models, db} = require('./db')
 
 const server = new ApolloServer({
-  typeDefs, resolvers
+  typeDefs,
+  resolvers,
+  context() {
+    return { models, db }
+  }
 })
 
-server.listen(1989).then(({ url }) => {
+server.listen().then(({ url }) => {
   console.log(`🚀 Server ready at ${url}`);
 })
