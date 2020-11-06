@@ -15,9 +15,15 @@ const typeDefs = gql`
     name: String!
     type: String!
   }
+
+  type Onesie {
+    type: String!
+    size: Int!
+  }
   
   type Query {
     pets: [Pet]!
+    onesies(): [Onesie]!
   }
 `;
 
