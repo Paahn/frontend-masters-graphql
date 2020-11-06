@@ -5,7 +5,7 @@
 
 module.exports = {
   Query: {
-    pets(_, __, context) {
+    pets(_, {type}, context) {
       return context.models.Pet.findMany()
     }
   },
