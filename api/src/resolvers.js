@@ -13,9 +13,7 @@ module.exports = {
         { type: 'Shark', size: 6},
         { type: 'Bat', size: 3},
         { type: 'WonderCat', size: 3}
-      ].filter(onesie => {
-        return onesie.type === input.type
-      })
+      ].filter(onesie => onesie.type === input.type)
     }
   },
   // Mutation: {
