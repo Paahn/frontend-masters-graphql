@@ -19,16 +19,19 @@ const typeDefs = gql`
   type Onesie {
     type: String!
     size: Int!
+    colour: String
   }
 
   input OnesieInput {
     type: String
     size: Int
+    colour: String
   }
   
   type Query {
     pets: [Pet]!
     onesies(input: OnesieInput): [Onesie]!
+    sizes(input: OnesieInput): [Onesie]!
   }
 `;
 

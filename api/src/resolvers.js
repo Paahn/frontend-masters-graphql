@@ -10,10 +10,17 @@ module.exports = {
     },
     onesies(_, {input}) {
       return [
-        { type: 'Shark', size: 6},
-        { type: 'Bat', size: 3},
-        { type: 'WonderCat', size: 3}
+        { type: 'Shark', size: 6, colour: 'Blue'},
+        { type: 'Bat', size: 3, colour: 'Black'},
+        { type: 'WonderCat', size: 3, colour: 'Yellow'}
       ].filter(onesie => onesie.type === input.type)
+    },
+    sizes(_, {input}) {
+      return [
+        { type: 'Shark', size: 6, colour: 'Blue'},
+        { type: 'Bat', size: 3, colour: 'Black'},
+        { type: 'WonderCat', size: 3, colour: 'Yellow'}
+      ].filter(size => size.size === input.size)
     }
   },
   // Mutation: {
