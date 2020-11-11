@@ -21,6 +21,14 @@ module.exports = {
         { type: 'Bat', size: 3, colour: 'Black'},
         { type: 'WonderCat', size: 3, colour: 'Yellow'}
       ].filter(size => size.size === input.size)
+    },
+    brands(_, {input}) {
+      return [
+        { type: 'Shark', size: 6, colour: 'Blue', brand: 'Adidas'},
+        { type: 'Bat', size: 3, colour: 'Black', brand: 'Adidas'},
+        { type: 'WonderCat', size: 3, colour: 'Yellow', brand: 'Burberry'},
+        { type: 'Viking', size: 15, colour: 'Black', brand: 'Versace'}
+      ].filter( brand => brand.brand === input.brand)
     }
   },
   // Mutation: {
