@@ -9,6 +9,9 @@ module.exports = {
     pets(_, __, context) {
       return context.models.Pet.findMany()
     },
+    inputPets(_, {input}, context) {
+      return context.models.Pet.findMany(input)
+    },
     onesies(_, {input}) {
       return [
         { type: 'Shark', size: 6, colour: 'Blue'},
