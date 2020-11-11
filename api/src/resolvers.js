@@ -6,6 +6,7 @@
 module.exports = {
   Query: {
     pets(_, {type}, context) {
+    pets(_, __, context) {
       return context.models.Pet.findMany()
     },
     onesies(_, {input}) {
