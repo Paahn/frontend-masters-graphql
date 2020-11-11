@@ -39,10 +39,11 @@ const typeDefs = gql`
   
   type Query {
     pets: [Pet]!
+    inputPets(input: PetInput): [Pet]!
     onesies(input: OnesieInput): [Onesie]!
     sizes(input: OnesieInput): [Onesie]!
     brands(input: OnesieInput): [Onesie]!
-    pet(input: PetInput): [Pet]!
+    pet(input: PetInput): Pet
   }
 `;
 
