@@ -29,12 +29,20 @@ const typeDefs = gql`
     colour: String
     brand: String
   }
+
+  input PetInput {
+    id: ID
+    createdAt: String
+    name: String
+    type: String
+  }
   
   type Query {
     pets: [Pet]!
     onesies(input: OnesieInput): [Onesie]!
     sizes(input: OnesieInput): [Onesie]!
     brands(input: OnesieInput): [Onesie]!
+    pet(input: PetInput): [Pet]!
   }
 `;
 
