@@ -37,9 +37,12 @@ module.exports = {
       return context.models.Pet.findOne(input)
     }
   },
-  // Mutation: {
-    
-  // },
+  Mutation: {
+    newPet(_, {input}, context) {
+      const pet = context.models.Pet.create(input)
+      return pet;
+    }
+  },
   // Pet: {
   //   img(pet) {
   //     return pet.type === 'DOG'
