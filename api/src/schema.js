@@ -45,6 +45,10 @@ const typeDefs = gql`
     brands(input: OnesieInput): [Onesie]!
     pet(input: PetInput): Pet
   }
+
+  type Mutation {
+    newPet(input: NewPetInput!): Pet!
+  }
 `;
 
 module.exports = typeDefs
