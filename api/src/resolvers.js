@@ -49,17 +49,11 @@ module.exports = {
       console.log(`pet is ${JSON.stringify(pet)}`);
       return context.models.User.findOne()
     }
-  //   img(pet) {
-  //     return pet.type === 'DOG'
-  //       ? 'https://placedog.net/300/300'
-  //       : 'http://placekitten.com/300/300'
-  //   }
-    },
+  },
   User: {
     pets(user, _, context) {
       console.log(`User => Pets`)
       return context.models.Pet.findMany()
     }
-    
   }
 }
