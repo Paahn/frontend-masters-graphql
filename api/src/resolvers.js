@@ -5,6 +5,9 @@
 
 module.exports = {
   Query: {
+    pet(_, {input}, context) {
+      return context.models.Pet.findOne(input)
+    },
     pets(_, __, context) {
       return context.models.Pet.findMany()
     },
@@ -32,9 +35,6 @@ module.exports = {
         { type: 'WonderCat', size: 3, colour: 'Yellow', brand: 'Burberry'},
         { type: 'Viking', size: 15, colour: 'Black', brand: 'Versace'}
       ].filter( brand => brand.brand === input.brand)
-    },
-    pet(_, {input}, context) {
-      return context.models.Pet.findOne(input)
     }
   },
   Mutation: {
