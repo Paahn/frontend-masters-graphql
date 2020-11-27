@@ -55,7 +55,11 @@ module.exports = {
   //       : 'http://placekitten.com/300/300'
   //   }
     },
-  // User: {
+  User: {
+    pets(user, _, context) {
+      console.log(`User => Pets`)
+      return context.models.Pet.findMany()
+    }
     
-  // }
+  }
 }
