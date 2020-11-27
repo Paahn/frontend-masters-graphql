@@ -6,6 +6,7 @@
 module.exports = {
   Query: {
     pet(_, {input}, context) {
+      console.log('QUERY => pet')
       return context.models.Pet.findOne(input)
     },
     pets(_, __, context) {
@@ -44,8 +45,9 @@ module.exports = {
     }
   },
   Pet: {
-    owner(pet, _, ctx) {
-
+    owner(pet, _, context) {
+      console.log(`pet is ${pet}`);
+      return context.models.User.findOne()
     }
   //   img(pet) {
   //     return pet.type === 'DOG'
