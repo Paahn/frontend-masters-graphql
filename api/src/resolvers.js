@@ -46,7 +46,7 @@ module.exports = {
   },
   Pet: {
     owner(pet, _, context) {
-      console.log(`pet is ${pet}`);
+      console.log(`pet is ${JSON.stringify(pet)}`);
       return context.models.User.findOne()
     }
   //   img(pet) {
