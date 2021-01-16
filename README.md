@@ -7,4 +7,4 @@ This course comes with some [slides](https://docs.google.com/presentation/d/1IrG
 ## What you'll need
 * Node version >= 6
 
-> To run the server, node api/src/server.js
+To run the server, node api/src/server.js
